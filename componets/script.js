@@ -120,5 +120,5 @@ const favocard = (crdind) => {
     // logout
     const Logout=()=>{
         sessionStorage.removeItem('logindatas');
-        window.location.href="../index.html"
+        window.location="../index.html"
     }
