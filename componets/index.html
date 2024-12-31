@@ -1,0 +1,59 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="relative container mx-auto px-4 w-[100%] py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">Gallery</a>
+            <ul class="flex space-x-6">
+                <li onclick="mainpages()" class="text-gray-700 cursor-pointer font-semibold hover:text-gray-900">
+                    Home
+                </li>
+                <li onclick="gotoAddimgtogallary()" class="text-gray-700 cursor-pointer font-semibold hover:text-gray-900">
+                    Add New Image
+                </li>
+                <li onclick="togglePopup()" class="w-[13px] text-center text-gray-700 cursor-pointer font-semibold hover:text-gray-900 ">
+                    <i class="fa-solid font-bold text-xl w-full fa-ellipsis-vertical"></i>
+                </li>
+            </ul>
+    
+            <!-- Popup Menu -->
+            <div id="popupMenu" class="hidden absolute bg-white shadow-lg border rounded-lg p-4 w-[222px] top-1 right-4 z-10">
+                <ul class="space-y-2">
+                    
+                    <li class="cursor-pointer w-full hover:text-red-500">Settings</li>
+                    <li onclick="DeleteAll()" class="cursor-pointer w-full hover:text-red-500">Delete All</li>
+                    <a href="../login.html"><li onclick="Logout()" class="cursor-pointer w-full hover:text-red-500">Logout</li></a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+
+    <!-- Image Gallery -->
+    <div id="displayimgcard" class="container mx-auto px-4 py-8 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 flex flex-col-reverse">
+        
+        <!-- Example of an Image Card -->
+
+        <div onclick="gotoAddimgtogallary()" class="relative order-1 group cursor-pointer">
+            <div class="w-full h-64 bg-gray-300 flex items-center justify-center rounded-lg shadow-lg">
+                <i class="fa-solid fa-file text-gray-600 text-4xl"></i>
+            </div>
+            <h3 class="text-center text-md text-gray-700 mt-2">Add New Image</h3>
+        </div>
+           
+    </div>
+
+</body>
+<script src="./login.js"></script>
+<script src="./script.js"></script>
+</html>
