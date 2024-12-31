@@ -15,7 +15,7 @@ const gotosignUp = ()=>{
     window.location="signup.html"
 }
 const gotologinpage=()=>{
-    window.location="login.html"
+    window.location="index.html"
 }
 let emailvalidcheck=/^[a-zA-Z0-9._%+-]+@gmail\.com$/
 
@@ -33,7 +33,7 @@ const usersignupedd=()=>{
                 })
                 sessionStorage.setItem("useraccount",JSON.stringify(accountdetails ))
                 sessionStorage.removeItem("images");
-                 window.location="index.html"
+                 window.location="landing.html"
             } else {
                 
                 alert("You entered a wrong email")
@@ -58,7 +58,7 @@ const userlogined=()=>{
                 )
                 if (validaccount) {
                     sessionStorage.setItem("logindatas",JSON.stringify([{email:loginemail.value,pass:loginpassword.value}]))
-                    window.location="./componets/index.html"
+                    window.location="./componets/landing.html"
                 }
                 else if(account==null){
                     alert("Please sign up ")
@@ -96,7 +96,7 @@ const changepass=()=>{
                     validaccount.useremail=forgotemail.value
                     validaccount.userpass=confirmforgotpass.value
                     sessionStorage.setItem("useraccount",JSON.stringify([{useremail:validaccount.useremail,userpass:validaccount.userpass}]))
-                    window.location="../login.html"
+                    window.location="../index.html"
                 }
                 else if(account==null){
                     alert("Please sign up ")

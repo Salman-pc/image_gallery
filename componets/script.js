@@ -19,7 +19,7 @@ let account = JSON.parse(sessionStorage.getItem("logindatas"))
 
     // Function to navigate to the main page
     const mainpages = () => {
-        window.location = "index.html";
+        window.location = "";
     };
 
     // Function to navigate to the add image page
@@ -43,7 +43,7 @@ let account = JSON.parse(sessionStorage.getItem("logindatas"))
 
             sessionStorage.setItem("images", JSON.stringify(images))||[];
 
-            window.location = "index.html";
+            window.location = "landing.html";
         } else {
             alert("Please Enter The Data");
         }
@@ -88,7 +88,7 @@ let account = JSON.parse(sessionStorage.getItem("logindatas"))
         sessionStorage.setItem("images", JSON.stringify(images));
 
         displaydata();
-        window.location="index.html"
+        window.location="landing.html"
     }
 
     //favorite card
@@ -114,11 +114,11 @@ const favocard = (crdind) => {
         
         console.log("Delete all");
         sessionStorage.removeItem("images");
-        window.location="index.html"
+        window.location="landing.html"
         
     }
     // logout
     const Logout=()=>{
         sessionStorage.removeItem('logindatas');
-        window.location.href="../login.html"
+        window.location.href="../index.html"
     }
